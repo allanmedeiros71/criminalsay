@@ -1,0 +1,1 @@
+{"content":"math/rand/v2 (Go 1.22+) auto-seeds the global source; the top-level Seed() function is removed. Use rand.IntN(n) not rand.Intn(n). Import math/rand/v2 explicitly. No Seed() call needed or possible.","source":"web","provider":"websearch","confidence":"LOW","fetched_at":"2026-07-05T12:49:33.242Z","ttl":86400000,"kind":"web"}
