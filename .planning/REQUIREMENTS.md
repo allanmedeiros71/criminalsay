@@ -63,23 +63,23 @@
 
 ## Traceability
 
-| REQ-ID | Phase | Notes |
-|--------|-------|-------|
-| DAT-01 | Phase 1 | go:embed anchor in main.go; path restriction means data/ at root |
-| DAT-02 | Phase 1 | Quote struct definition frozen before render work begins |
-| DAT-03 | Phase 1 | Handled by render layer — graceful omission |
-| CORE-01 | Phase 1 | quotes.Random([]Quote) using math/rand/v2 |
-| CORE-02 | Phase 2 | main.go wiring; fmt.Println(render.Quote(...)) |
-| CORE-03 | Phase 1+2 | Embedded data + single JSON unmarshal; no network |
-| REND-01 | Phase 2 | lipgloss Border{Left:"▌"} with red BorderForeground |
-| REND-02 | Phase 2 | Wrap at (fixedWidth - sidebarWidth); sidebar repeated per line |
-| REND-03 | Phase 2 | lipgloss style with white/bright foreground |
-| REND-04 | Phase 2 | Blank line between quote block and attribution |
-| REND-05 | Phase 2 | Attribution: yellow author + dim rest + · separator |
-| REND-06 | Phase 2 | No box border — Estilo 4 is sidebar-only |
-| COLOR-01 | Phase 2 | lipgloss auto-detects color depth from stdout |
-| COLOR-02 | Phase 2 | lipgloss strips ANSI for non-TTY/NO_COLOR automatically |
-| BUILD-01 | Phase 1+2 | Verified at each phase; final binary in Phase 3 |
-| BUILD-02 | Phase 3 | Makefile with CGO_ENABLED=0 for all targets |
-| BUILD-03 | Phase 1+2 | Tests written alongside implementation per package |
-| DOC-01 | Phase 3 | README in PT-BR |
+| REQ-ID | Phase | Status | Notes |
+|--------|-------|--------|-------|
+| DAT-01 | Phase 1 | Pending | go:embed anchor in main.go; path restriction means data/ at root |
+| DAT-02 | Phase 1 | Pending | Quote struct definition frozen before render work begins |
+| DAT-03 | Phase 1 | Pending | Graceful omission implemented in render layer (Phase 2) but struct handles it here |
+| CORE-01 | Phase 1 | Pending | quotes.Random([]Quote) using math/rand/v2 |
+| CORE-02 | Phase 2 | Pending | main.go wiring; fmt.Println(render.Quote(...)) |
+| CORE-03 | Phase 1 | Pending | NFR satisfied by embedded data + single JSON unmarshal — no network I/O |
+| REND-01 | Phase 2 | Pending | lipgloss Border{Left:"▌"} with red BorderForeground |
+| REND-02 | Phase 2 | Pending | Wrap at (fixedWidth - sidebarWidth); sidebar repeated per line |
+| REND-03 | Phase 2 | Pending | lipgloss style with white/bright foreground |
+| REND-04 | Phase 2 | Pending | Blank line between quote block and attribution |
+| REND-05 | Phase 2 | Pending | Attribution: yellow author + dim rest + · separator |
+| REND-06 | Phase 2 | Pending | No box border — Estilo 4 is sidebar-only |
+| COLOR-01 | Phase 2 | Pending | lipgloss auto-detects color depth from stdout |
+| COLOR-02 | Phase 2 | Pending | lipgloss strips ANSI for non-TTY/NO_COLOR automatically |
+| BUILD-01 | Phase 1 | Pending | First verified in Phase 1; binary produced at project root |
+| BUILD-02 | Phase 3 | Pending | Makefile with CGO_ENABLED=0 for all targets |
+| BUILD-03 | Phase 1 | Pending | Data layer tests in Phase 1; render tests added in Phase 2 — requirement satisfied when both pass |
+| DOC-01 | Phase 3 | Pending | README in PT-BR |
