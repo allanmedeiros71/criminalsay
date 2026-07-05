@@ -53,7 +53,12 @@ Plans:
   4. A quote with a missing optional field (empty `character` or `episodeTitle`) renders without layout breakage
   5. `go test ./...` passes green, covering both `internal/quotes` and `internal/render`
 
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+
+- [ ] 02-01-PLAN.md — Estilo 4 render package, color degradation, main.go wiring, full test gate
+
 **UI hint**: yes
 
 ### Phase 3: Build and Distribution
