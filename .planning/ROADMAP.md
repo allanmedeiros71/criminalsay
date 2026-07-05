@@ -29,7 +29,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Repeated calls to `quotes.Random` return different quotes over multiple runs, confirming uniform random selection
   4. `go test ./internal/quotes/...` passes with coverage of `Load` and `Random`
   5. `data/quotes.json` contains at least 15 real Criminal Minds quotes, each with `quote`, `author`, `season`, and `episode` fields
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 01-01-PLAN.md — Walking Skeleton: module scaffold, embedded quotes data, internal/quotes package, Phase 1 stub binary
 
 ### Phase 2: Render and Output
 **Goal**: Running `criminalsay` prints a styled Criminal Minds quote to stdout and exits with code 0; styling degrades cleanly when color is unavailable.
