@@ -4,15 +4,15 @@
 
 ### Data (DAT)
 
-- [ ] **DAT-01**: Binary contains an embedded JSON file with ≥15 real Criminal Minds quotes compiled at build time (go:embed)
-- [ ] **DAT-02**: Each quote record includes: `quote` (text), `author` (original author), `character` (CM character who cited it; may be empty), `season` (int), `episode` (int), `episodeTitle` (string)
-- [ ] **DAT-03**: Missing optional fields (character, episodeTitle) are rendered gracefully — omitted without breaking layout
+- [x] **DAT-01**: Binary contains an embedded JSON file with ≥15 real Criminal Minds quotes compiled at build time (go:embed)
+- [x] **DAT-02**: Each quote record includes: `quote` (text), `author` (original author), `character` (CM character who cited it; may be empty), `season` (int), `episode` (int), `episodeTitle` (string)
+- [x] **DAT-03**: Missing optional fields (character, episodeTitle) are rendered gracefully — omitted without breaking layout
 
 ### Core Behavior (CORE)
 
-- [ ] **CORE-01**: Running `criminalsay` with no arguments selects one quote uniformly at random from the embedded dataset
+- [x] **CORE-01**: Running `criminalsay` with no arguments selects one quote uniformly at random from the embedded dataset
 - [ ] **CORE-02**: Program prints the formatted quote to stdout and exits with code 0
-- [ ] **CORE-03**: Cold start completes in under 50ms under typical conditions (suitable for .bashrc/.zshrc)
+- [x] **CORE-03**: Cold start completes in under 50ms under typical conditions (suitable for .bashrc/.zshrc)
 
 ### Rendering (REND)
 
@@ -30,9 +30,9 @@
 
 ### Build & Distribution (BUILD)
 
-- [ ] **BUILD-01**: `go build -o criminalsay .` produces a working binary from the repository root
+- [x] **BUILD-01**: `go build -o criminalsay .` produces a working binary from the repository root
 - [ ] **BUILD-02**: Cross-compile script (`Makefile` or `scripts/build.sh`) produces binaries for: Linux amd64, macOS amd64, macOS arm64, Windows amd64; all with CGO_ENABLED=0
-- [ ] **BUILD-03**: `go test ./...` passes with reasonable coverage of `internal/quotes` and `internal/render`
+- [x] **BUILD-03**: `go test ./...` passes with reasonable coverage of `internal/quotes` and `internal/render`
 
 ### Documentation (DOC)
 
@@ -65,12 +65,12 @@
 
 | REQ-ID | Phase | Status | Notes |
 |--------|-------|--------|-------|
-| DAT-01 | Phase 1 | Pending | go:embed anchor in main.go; path restriction means data/ at root |
-| DAT-02 | Phase 1 | Pending | Quote struct definition frozen before render work begins |
-| DAT-03 | Phase 1 | Pending | Graceful omission implemented in render layer (Phase 2) but struct handles it here |
-| CORE-01 | Phase 1 | Pending | quotes.Random([]Quote) using math/rand/v2 |
+| DAT-01 | Phase 1 | Complete | go:embed anchor in main.go; path restriction means data/ at root |
+| DAT-02 | Phase 1 | Complete | Quote struct definition frozen before render work begins |
+| DAT-03 | Phase 1 | Complete | Graceful omission implemented in render layer (Phase 2) but struct handles it here |
+| CORE-01 | Phase 1 | Complete | quotes.Random([]Quote) using math/rand/v2 |
 | CORE-02 | Phase 2 | Pending | main.go wiring; fmt.Println(render.Quote(...)) |
-| CORE-03 | Phase 1 | Pending | NFR satisfied by embedded data + single JSON unmarshal — no network I/O |
+| CORE-03 | Phase 1 | Complete | NFR satisfied by embedded data + single JSON unmarshal — no network I/O |
 | REND-01 | Phase 2 | Pending | lipgloss Border{Left:"▌"} with red BorderForeground |
 | REND-02 | Phase 2 | Pending | Wrap at (fixedWidth - sidebarWidth); sidebar repeated per line |
 | REND-03 | Phase 2 | Pending | lipgloss style with white/bright foreground |
@@ -79,7 +79,7 @@
 | REND-06 | Phase 2 | Pending | No box border — Estilo 4 is sidebar-only |
 | COLOR-01 | Phase 2 | Pending | lipgloss auto-detects color depth from stdout |
 | COLOR-02 | Phase 2 | Pending | lipgloss strips ANSI for non-TTY/NO_COLOR automatically |
-| BUILD-01 | Phase 1 | Pending | First verified in Phase 1; binary produced at project root |
+| BUILD-01 | Phase 1 | Complete | First verified in Phase 1; binary produced at project root |
 | BUILD-02 | Phase 3 | Pending | Makefile with CGO_ENABLED=0 for all targets |
-| BUILD-03 | Phase 1 | Pending | Data layer tests in Phase 1; render tests added in Phase 2 — requirement satisfied when both pass |
+| BUILD-03 | Phase 1 | Complete | Data layer tests in Phase 1; render tests added in Phase 2 — requirement satisfied when both pass |
 | DOC-01 | Phase 3 | Pending | README in PT-BR |
