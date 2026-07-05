@@ -737,17 +737,19 @@ func Random(qs []Quote) Quote {
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Episode accuracy for quotes.json**
    - What we know: 20 quotes are populated from training knowledge; characters and approximate seasons are likely correct.
    - What's unclear: Exact episode numbers and titles may be off by 1-2 for some entries.
    - Recommendation: The phase plan should include a task noting "user reviews quotes.json for accuracy" as an explicit step, not a silent assumption.
+   - **RESOLVED:** Data accuracy is a known assumption (A1); user reviews `data/quotes.json` post-execution per D-03. No code risk — this is a data content concern only, not a structural issue.
 
 2. **Go version in go.mod toolchain directive**
    - What we know: Installed toolchain is go1.25.6; CLAUDE.md recommends go1.26 toolchain.
    - What's unclear: Whether to specify `toolchain go1.25.6` (matching installed) or omit the toolchain line.
    - Recommendation: Use `toolchain go1.25.6` to match what's installed. If user later upgrades to 1.26, `go mod tidy` updates it.
+   - **RESOLVED:** Use `toolchain go1.25.6` to match the installed version; `go mod tidy` updates automatically on toolchain upgrade (Pitfall 4, Assumption A3).
 
 ---
 
