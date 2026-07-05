@@ -1,8 +1,8 @@
 # CriminalSay — Contexto do Projeto (GSD / SDD)
 
-> Documento de contexto para desenvolvimento spec-driven com **GSD Core** no **Claude Code**.
-> Serve de insumo para a fase **Discuss** de `/gsd-new-project`: reúne decisões travadas,
-> escopo, especificação funcional e critérios de aceitação **antes** do planejamento.
+> Documento mestre do projeto **CriminalSay** para humanos e agentes.
+> Contém: decisões travadas, especificação funcional, critérios de aceitação **e**
+> o fluxo GSD completo adaptado ao estado atual do repositório.
 
 ---
 
@@ -16,7 +16,7 @@ aleatória da série *Criminal Minds* no terminal, com formatação visual elabo
 - **Repositório alvo:** `github.com/allanmedeiros71/criminalsay`
 - **Licença:** MIT
 - **Idioma do código/comentários:** inglês · **Idioma da documentação de usuário:** português
-- **Status:** greenfield (projeto novo, do zero)
+- **Status:** em desenvolvimento (milestone v1.0 — Fase 01 shipped, Fase 02 em andamento)
 
 ### Elevator pitch
 Rode `criminalsay` e receba, com estilo, uma citação memorável do BAU — ideal para
@@ -99,29 +99,28 @@ com atribuição correta de personagem e episódio quando conhecida.
 
 ---
 
-## 6. Arquitetura e estrutura proposta
+## 6. Arquitetura e estrutura do repositório
 
-> Proposta inicial; o `/gsd-plan` pode refinar. Layout idiomático Go.
+> Layout atual (pós-Fase 01). Fase 02 adiciona `internal/render/`; Fase 03 adiciona `Makefile`/`dist/`.
 
 ```
 criminalsay/
-├── main.go                 # ponto de entrada: sorteia e renderiza
-├── go.mod
+├── main.go                 # embed anchor, Load → Random → stub (Fase 02: render)
+├── go.mod                  # lipgloss v1.1.0 pre-declarado para Fase 02
 ├── go.sum
 ├── data/
-│   └── quotes.json         # base de citações (go:embed)
+│   └── quotes.json         # 20 citações Criminal Minds (go:embed)
 ├── internal/
-│   ├── quotes/
-│   │   ├── quotes.go       # carga do JSON embutido, tipo Quote, seleção aleatória
+│   ├── quotes/             # ✓ Fase 01
+│   │   ├── quotes.go       # Quote struct, Load, Random
 │   │   └── quotes_test.go
-│   └── render/
-│       ├── render.go       # estilo lipgloss, função Render(Quote) string
+│   └── render/             # Fase 02 (pendente)
+│       ├── render.go       # Estilo 4 lipgloss, Render(Quote) string
 │       └── render_test.go
-├── scripts/
-│   └── build.sh            # cross-compile GOOS/GOARCH para os 3 SOs
-├── .gitignore              # /dist, binários
+├── .planning/              # artefatos GSD (ver seção 11.3)
+├── CONTEXT.md              # este documento
 ├── LICENSE                 # MIT
-└── README.md               # PT-BR: instalação, uso, build
+└── README.md               # EN (Fase 03: README PT-BR)
 ```
 
 ### Contratos de módulo (para orientar planejamento e testes)
@@ -180,42 +179,327 @@ Critério de "verde": `go build ./...` e `go test ./...` limpos; binário roda e
 
 ## 9. Critérios de aceitação do MVP (Definition of Done)
 
-- [ ] `criminalsay` exibe uma citação aleatória formatada e sai com código 0.
-- [ ] Base embutida com ≥15 citações reais, atribuídas corretamente.
-- [ ] Estilo 4 (Terminal cru) implementado com lipgloss conforme seção 6.1, com quebra de linha correta e barra lateral alinhada.
-- [ ] Degradação graciosa sem cor (`NO_COLOR` / pipe / não-TTY).
-- [ ] `go test ./...` passa; cobertura razoável nos dois pacotes internos.
-- [ ] Binários cross-compilados para Linux, macOS (amd64+arm64) e Windows.
-- [ ] README em PT-BR com instalação, uso e instruções de build.
+- [x] Base embutida com ≥15 citações reais, atribuídas corretamente. *(Fase 01 — 20 quotes)*
+- [x] `go test ./internal/quotes/...` passa com cobertura adequada. *(Fase 01)*
+- [x] `go build -o criminalsay .` produz binário funcional. *(Fase 01 — stub output)*
+- [ ] `criminalsay` exibe citação aleatória **formatada** (Estilo 4) e sai com código 0. *(Fase 02)*
+- [ ] Estilo 4 (Terminal cru) com lipgloss: barra `▌`, wrap ≤52 col, atribuição dimmed. *(Fase 02)*
+- [ ] Degradação graciosa sem cor (`NO_COLOR` / pipe / não-TTY). *(Fase 02)*
+- [ ] `go test ./...` passa nos pacotes `quotes` e `render`. *(Fase 02)*
+- [ ] Binários cross-compilados para Linux, macOS (amd64+arm64) e Windows. *(Fase 03)*
+- [ ] README em PT-BR com instalação, uso e instruções de build. *(Fase 03)*
 - [ ] Repositório publicado em `github.com/allanmedeiros71/criminalsay` com licença MIT.
 
 ---
 
-## 10. Decisões em aberto (para a fase Discuss confirmar)
+## 10. Decisões resolvidas na Fase 01 (referência)
 
-1. **Personagem "narrador":** exibir sempre o personagem que citou (quando conhecido) ou só o autor original da frase?
-2. **Idioma das citações:** manter em inglês (original da série) ou incluir tradução PT-BR?
-3. **Largura fixa vs. adaptativa** ao tamanho do terminal (a spec do Estilo 4 sugere largura fixa; confirmar).
+| Tópico | Decisão |
+|--------|---------|
+| Personagem vs. autor | Campo `author` = autor original; `character` = personagem CM que citou (D-01/D-02) |
+| Idioma das citações | Inglês (original da série) — D-04 |
+| Largura do bloco | Fixa ≤52 colúteis úteis — definida na Fase 02 (REND-02) |
+| Versão lipgloss | **v1.1.0** (não v2) — pre-declarada em `go.mod` |
+| Anchor do embed | **`main.go` only** — Go proíbe `..` em patterns de embed |
 
 ---
 
-## 11. Como conduzir com GSD Core
+## 11. Fluxo GSD completo — CriminalSay
 
-```bash
-# 1. Instalar o GSD Core no runtime (Claude Code)
-npx @opengsd/gsd-core@latest
+> **GSD Core** (Git. Ship. Done.) — desenvolvimento spec-driven com planejamento em `.planning/`,
+> execução fase a fase, verificação automatizada e ship via PR.
+> Runtime: **Cursor** (`~/.cursor/gsd-core/`). Modo deste projeto: **`yolo`**.
 
-# 2. Dentro do diretório do projeto, iniciar o projeto no Claude Code
-/gsd-new-project
-#   → forneça este CONTEXT.md como insumo da fase Discuss
+### 11.1 Visão geral do loop
 
-# 3. Seguir o loop de fases do GSD:
-#    Discuss  → confirmar as "decisões em aberto" da seção 10
-#    Plan     → decompor em fases/tarefas (respeitar decisões travadas da seção 2)
-#    Execute  → implementar em ondas com contexto limpo
-#    Verify   → rodar testes/critérios da seção 7 e 9 antes de declarar done
-#    Ship     → abrir PR, arquivar fase, repetir
+```text
+┌─────────────────────────────────────────────────────────────────────────┐
+│  MILESTONE (v1.0)                                                       │
+│                                                                         │
+│  /gsd-new-project  ──►  PROJECT · REQUIREMENTS · ROADMAP · STATE        │
+│         │                                                               │
+│         ▼                                                               │
+│  ┌─── POR FASE (1 → 2 → 3) ───────────────────────────────────────┐   │
+│  │  discuss ─► plan ─► execute ─► validate ─► verify ─► secure   │   │
+│  │     │                                              │            │   │
+│  │     └──────────────────────────────────────────────┼──► ship   │   │
+│  └────────────────────────────────────────────────────┘            │   │
+│         │                                                               │
+│         ▼                                                               │
+│  /gsd-complete-milestone 1.0.0  ──►  tag · archive · próximo ciclo     │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
 
-> **Nota:** o instalador do GSD é obrigatório para compatibilidade entre runtimes —
-> não copie arquivos de `agents/` ou `commands/` manualmente.
+Comando de roteamento universal quando não souber qual usar:
+
+```text
+/gsd-progress              # onde estou, o que falta
+/gsd-progress --do "..."   # roteia intenção em linguagem natural
+```
+
+### 11.2 Estado atual deste projeto
+
+| Item | Valor |
+|------|-------|
+| Milestone | **v1.0** |
+| Fases no roadmap | 3 (Data Foundation → Render and Output → Build and Distribution) |
+| Fase atual | **2 — Render and Output** (contexto coletado, plano criado) |
+| Fase 01 | ✓ Completa · verificada · **shipped — [PR #1](https://github.com/allanmedeiros71/criminalsay/pull/1)** |
+| Branch de trabalho | `main` (local) · PR branch: `gsd/phase-01-data-foundation-pr` |
+| Retomar sessão | `.planning/phases/02-render-and-output/02-CONTEXT.md` |
+
+**Progresso de requisitos (v1):**
+
+| Grupo | Status |
+|-------|--------|
+| DAT-01…03, CORE-01, CORE-03, BUILD-01, BUILD-03 | ✓ Fase 01 |
+| CORE-02, REND-01…06, COLOR-01…02 | Pendente — Fase 02 |
+| BUILD-02, DOC-01 | Pendente — Fase 03 |
+
+### 11.3 Estrutura `.planning/` (mapa de artefatos)
+
+```text
+.planning/
+├── PROJECT.md          # visão, valor central, decisões-chave
+├── REQUIREMENTS.md     # REQ-IDs rastreáveis (DAT, CORE, REND, COLOR, BUILD, DOC)
+├── ROADMAP.md          # fases, critérios de sucesso, dependências
+├── STATE.md            # memória viva — fase atual, progresso, blockers
+├── config.json         # toggles de workflow (modo, segurança, ship, branches)
+├── research/           # pesquisa de domínio (criado no new-project)
+└── phases/
+    └── NN-slug/
+        ├── NN-CONTEXT.md       # visão da fase (discuss)
+        ├── NN-RESEARCH.md      # pesquisa técnica da fase
+        ├── NN-01-PLAN.md       # plano executável (tarefas, must-haves, threat_model)
+        ├── NN-01-SUMMARY.md    # o que foi construído (pós-execução)
+        ├── NN-VERIFICATION.md  # relatório do verifier (status: passed/blocked)
+        ├── NN-VALIDATION.md    # mapa de cobertura de testes (Nyquist)
+        ├── NN-SECURITY.md      # threat register — gate de ship (threats_open: 0)
+        └── NN-PATTERNS.md      # padrões descobertos na fase
+```
+
+**Arquivos estruturais** (viajam no PR): `STATE.md`, `ROADMAP.md`, `PROJECT.md`, `REQUIREMENTS.md`.
+**Arquivos transientes** (ruído para review — filtrados por `/gsd-pr-branch`): `phases/**`, `research/**`.
+
+### 11.4 Fase 0 — Inicialização (já concluída)
+
+```bash
+# Instalar/atualizar GSD Core
+npx @opengsd/gsd-core@latest
+
+# Inicializar projeto (forneceu este CONTEXT.md como insumo)
+/gsd-new-project
+```
+
+**Entregáveis gerados:** `.planning/PROJECT.md`, `REQUIREMENTS.md`, `ROADMAP.md`, `STATE.md`, `config.json`, pesquisa de domínio.
+
+Para codebases existentes (não é o caso aqui): `/gsd-map-codebase` antes do new-project.
+
+### 11.5 Loop por fase — CriminalSay v1.0
+
+Cada fase do roadmap segue a mesma sequência. Exemplo com as três fases deste projeto:
+
+#### Passo 1 — Discuss (opcional, recomendado)
+
+```text
+/gsd-discuss-phase 2
+```
+
+- Captura visão, essenciais e limites antes do plano.
+- Gera/atualiza `02-CONTEXT.md`.
+- **Fase 02:** contexto já coletado — retomar de `02-CONTEXT.md` se necessário.
+
+#### Passo 2 — Plan
+
+```text
+/gsd-plan-phase 2
+/gsd-plan-phase 2 --research        # força nova pesquisa
+/gsd-plan-phase 2 --tdd             # ordem test-first no plano
+/gsd-plan-phase 2 --mvp             # fatia vertical MVP
+```
+
+- Gera `02-01-PLAN.md` com tarefas, must-haves, `<threat_model>` e critérios de verificação.
+- **Fase 01:** plano `01-01-PLAN.md` (Walking Skeleton) — concluído.
+- **Fase 02:** plano `02-01-PLAN.md` (Estilo 4 render) — criado, pendente execução.
+- **Fase 03:** planos TBD.
+
+#### Passo 3 — Execute
+
+```text
+/gsd-execute-phase 2
+/gsd-execute-phase 2 --wave 1      # só a onda 1
+/gsd-execute-phase 2 --tdd          # enforce RED/GREEN
+```
+
+- Executa planos em ondas paralelas; commits atômicos convencionais.
+- Atualiza `REQUIREMENTS.md`, `ROADMAP.md`, `STATE.md`.
+- **Fase 01 entregou:** `go.mod`, `data/quotes.json`, `internal/quotes/`, `main.go` (stub `<quote> — <author>`).
+- **Fase 02 entregará:** `internal/render/`, wiring lipgloss Estilo 4, `go test ./...` green.
+
+#### Passo 4 — Validate (Nyquist)
+
+```text
+/gsd-validate-phase 2
+```
+
+- Audita lacunas entre plano, testes e requisitos.
+- Preenche/atualiza `02-VALIDATION.md`.
+
+#### Passo 5 — Verify (UAT)
+
+```text
+/gsd-verify-work 2
+```
+
+- Verificação conversacional + evidências automatizadas.
+- Gera `02-VERIFICATION.md` com `status: passed` (obrigatório para ship).
+
+Critérios de aceitação deste projeto (seções 7 e 9 deste documento) são a referência humana; o verifier usa must-haves do plano e REQ-IDs.
+
+#### Passo 6 — Secure (gate obrigatório neste projeto)
+
+```text
+/gsd-secure-phase 2
+```
+
+- **`workflow.security_enforcement: true`** em `.planning/config.json`.
+- Exige `NN-SECURITY.md` com **`threats_open: 0`** antes de `/gsd-ship`.
+- ASVS Level 1 — threat model do `PLAN.md` + mitigações verificadas.
+- **Fase 01:** `01-SECURITY.md` criado (5 ameaças fechadas; T-01-02 mitigada em `main.go`).
+
+#### Passo 7 — Ship
+
+```text
+/gsd-ship 2
+/gsd-pr-branch 2          # branch limpa (só código + planning estrutural)
+```
+
+**Preflight checks (todos obrigatórios):**
+
+1. `VERIFICATION.md` → `status: passed`
+2. Working tree limpa (sem changes unstaged)
+3. Branch de feature (não `main` direto — `branching_strategy: none` cria branch sob demanda)
+4. Remote `origin` + `gh` autenticado
+5. Security gate → `threats_open: 0`
+
+**Fluxo de ship deste repositório:**
+
+```text
+/gsd-secure-phase N
+/gsd-pr-branch N                    # gsd/phase-0N-slug-pr — filtra phases/** do diff
+/gsd-ship N                         # push + PR body rico + update STATE.md
+```
+
+Templates de branch (`.planning/config.json`):
+
+- Fase: `gsd/phase-{phase}-{slug}` → ex.: `gsd/phase-02-render-and-output`
+- PR: `{branch}-pr` → ex.: `gsd/phase-02-render-and-output-pr`
+
+**Fase 01 — referência:** [PR #1](https://github.com/allanmedeiros71/criminalsay/pull/1) · branch `gsd/phase-01-data-foundation-pr`.
+
+#### Passo 8 — Repetir ou fechar milestone
+
+```text
+/gsd-execute-phase 3      # última fase
+/gsd-complete-milestone 1.0.0
+```
+
+Após Fase 3 (Makefile cross-compile + README PT-BR): arquivar milestone, tag git, preparar v2.
+
+### 11.6 Roadmap CriminalSay — comandos por fase
+
+| Fase | Nome | Objetivo | Comando seguinte |
+|------|------|----------|------------------|
+| **1** | Data Foundation | JSON embed, `internal/quotes`, Walking Skeleton | ✓ Shipped — merge [PR #1](https://github.com/allanmedeiros71/criminalsay/pull/1) |
+| **2** | Render and Output | lipgloss Estilo 4, word-wrap, degradacao de cor | `/gsd-execute-phase 2` |
+| **3** | Build and Distribution | Makefile, `dist/`, README PT-BR | `/gsd-plan-phase 3` (após Fase 2) |
+
+### 11.7 Comandos auxiliares (uso frequente)
+
+| Comando | Quando usar |
+|---------|-------------|
+| `/gsd-progress` | Ver barra de progresso, fase atual, próxima ação |
+| `/gsd-quick` | Tarefa ad-hoc pequena (`.planning/quick/`) |
+| `/gsd-fast "..."` | Fix trivial inline (≤3 arquivos, sem plano) |
+| `/gsd-debug "..."` | Debug persistente entre sessões |
+| `/gsd-capture` | Guardar ideia, todo ou seed |
+| `/gsd-code-review` | Review pós-execução da fase |
+| `/gsd-ui-review` | Audit visual (Fase 02 tem UI hint) |
+| `/gsd-pause-work` | Handoff ao pausar mid-phase |
+| `/gsd-resume-work` | Retomar sessão anterior |
+| `/gsd-help --full` | Referência completa de comandos |
+
+### 11.8 Configuração GSD deste projeto
+
+Arquivo: `.planning/config.json`
+
+| Toggle | Valor | Efeito |
+|--------|-------|--------|
+| `mode` | `yolo` | Execução autônoma, menos prompts |
+| `commit_docs` | `true` | Commits automáticos de `.planning/` |
+| `branching_strategy` | `none` | Sem branch automática — criar manualmente ou via `/gsd-pr-branch` |
+| `workflow.security_enforcement` | `true` | `/gsd-secure-phase` obrigatório antes de ship |
+| `workflow.security_asvs_level` | `1` | Verificação grep-level (L1) |
+| `workflow.code_review` | `true` | Review oferecido pós-ship |
+| `workflow.ui_phase` | `true` | UI-SPEC disponível para Fase 02 |
+| `workflow.nyquist_validation` | `true` | `/gsd-validate-phase` ativo |
+| `workflow.verifier` | `true` | `/gsd-verify-work` ativo |
+
+### 11.9 Gates de qualidade — CriminalSay
+
+```text
+Execute
+   │
+   ├─► go test ./...          (BUILD-03 — por fase)
+   ├─► go build -o criminalsay .
+   │
+Validate (Nyquist)
+   │
+Verify (UAT → VERIFICATION.md status: passed)
+   │
+Secure (SECURITY.md → threats_open: 0)
+   │
+Ship (push + gh pr create + STATE.md)
+```
+
+**Comandos de verificação manual rápida (Fase 02+):**
+
+```bash
+go build -o criminalsay .
+./criminalsay                        # TTY colorido
+NO_COLOR=1 ./criminalsay             # sem ANSI
+./criminalsay | cat                  # pipe — texto legível
+go test ./... -count=1               # suite completa
+```
+
+### 11.10 Próximo passo imediato
+
+```text
+/gsd-execute-phase 2
+```
+
+Implementar `internal/render/` (Estilo 4), wiring em `main.go`, testes REND/COLOR,
+substituir stub `<quote> — <author>` por saída lipgloss formatada.
+
+Se precisar revisar decisões visuais antes de executar:
+
+```text
+/gsd-discuss-phase 2 --view    # reler 02-CONTEXT.md interativamente
+```
+
+---
+
+## 12. Instalação e manutenção do GSD
+
+```bash
+# Instalar/atualizar GSD Core no runtime Cursor
+npx @opengsd/gsd-core@latest
+
+# Diagnóstico do diretório de planning
+/gsd-health
+
+# Ver todos os comandos
+/gsd-help --full
+```
+
+> **Nota:** use sempre o instalador oficial — não copie `agents/` ou `commands/` manualmente entre runtimes.
