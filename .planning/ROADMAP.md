@@ -73,7 +73,10 @@ Plans:
   2. Each binary in `dist/` runs `criminalsay` and outputs a formatted quote without errors on its target platform
   3. `README.md` in PT-BR documents installation (via `go install` or downloading a binary), usage (run `criminalsay`), and build instructions (clone + `make`)
 
-**Plans**: TBD
+**Plans**: 1/2 plans executed
+
+- [x] 03-01-PLAN.md
+- [ ] 03-02-PLAN.md
 
 ## Progress
 
@@ -84,4 +87,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Data Foundation | 1/1 | Complete    | 2026-07-05 |
 | 2. Render and Output | 1/1 | Complete    | 2026-07-06 |
-| 3. Build and Distribution | 0/? | Not started | - |
+| 3. Build and Distribution | 1/2 | In Progress|  |
