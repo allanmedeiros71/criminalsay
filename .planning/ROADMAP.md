@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Data Foundation** - go.mod, project layout, embedded quotes JSON, internal/quotes package, data layer tests (completed 2026-07-05)
 - [x] **Phase 2: Render and Output** - internal/render with Estilo 4 sidebar, word-wrap, color degradation, main.go wiring; go test ./... green (completed 2026-07-06)
-- [ ] **Phase 3: Build and Distribution** - cross-compile Makefile, dist/ artifacts, PT-BR README
+- [x] **Phase 3: Build and Distribution** - cross-compile Makefile, dist/ artifacts, PT-BR README (completed 2026-07-06)
 
 ## Phase Details
 
@@ -73,10 +73,10 @@ Plans:
   2. Each binary in `dist/` runs `criminalsay` and outputs a formatted quote without errors on its target platform
   3. `README.md` in PT-BR documents installation (via `go install` or downloading a binary), usage (run `criminalsay`), and build instructions (clone + `make`)
 
-**Plans**: 1/2 plans executed
+**Plans**: 2/2 plans complete
 
 - [x] 03-01-PLAN.md
-- [ ] 03-02-PLAN.md
+- [x] 03-02-PLAN.md
 
 ## Progress
 
@@ -87,4 +87,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Data Foundation | 1/1 | Complete    | 2026-07-05 |
 | 2. Render and Output | 1/1 | Complete    | 2026-07-06 |
-| 3. Build and Distribution | 1/2 | In Progress|  |
+| 3. Build and Distribution | 2/2 | Complete   | 2026-07-06 |
