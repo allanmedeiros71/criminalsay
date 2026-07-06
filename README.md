@@ -23,15 +23,11 @@ A command-line tool that prints a randomly selected *Criminal Minds* quote to yo
 
 ### Go install
 
-Requires [Go 1.21+](https://go.dev/dl/).
+Requires [Go 1.22+](https://go.dev/dl/).
 
 ```bash
 go install github.com/allanmedeiros71/criminalsay@latest
 ```
-
-### Pre-built binaries
-
-Download the binary for your platform from the [Releases](https://github.com/allanmedeiros71/criminalsay/releases) page and place it on your `PATH`.
 
 ## Usage
 
@@ -101,9 +97,7 @@ criminalsay/
 ├── internal/
 │   ├── quotes/             # JSON loading, Quote type, random selection
 │   └── render/             # lipgloss styling and word-wrap
-├── scripts/
-│   └── build.sh            # Cross-compile helper
-└── Makefile                # Build targets
+└── Makefile                # Build targets (build, test, clean, cross-compile)
 ```
 
 ## Quote data format
@@ -125,11 +119,15 @@ To add a new quote, edit `data/quotes.json` and rebuild — no code changes requ
 
 ```bash
 # Run tests
-go test ./...
+make test        # or: go test ./...
 
 # Build and run
-go build -o criminalsay . && ./criminalsay
+make build && ./criminalsay
 ```
+
+---
+
+Documentação em português: [README.pt.md](README.pt.md)
 
 ## License
 
