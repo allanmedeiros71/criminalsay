@@ -5,11 +5,21 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/charmbracelet/x/term"
+
 	"github.com/allanmedeiros71/criminalsay/internal/quotes"
+	"github.com/allanmedeiros71/criminalsay/internal/render"
 )
 
 //go:embed data/quotes.json
 var quoteData []byte
+
+func colorEnabled() bool {
+	if os.Getenv("NO_COLOR") != "" {
+		return false
+	}
+	return term.IsTerminal(os.Stdout.Fd())
+}
 
 func main() {
 	qs, err := quotes.Load(quoteData)
@@ -22,5 +32,5 @@ func main() {
 		os.Exit(1)
 	}
 	q := quotes.Random(qs)
-	fmt.Println(q.Quote + " — " + q.Author)
+	fmt.Println(render.Quote(q, colorEnabled()))
 }
