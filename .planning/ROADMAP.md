@@ -14,7 +14,7 @@ CriminalSay ships in three phases: first the data foundation (Quote struct, embe
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Data Foundation** - go.mod, project layout, embedded quotes JSON, internal/quotes package, data layer tests (completed 2026-07-05)
-- [ ] **Phase 2: Render and Output** - internal/render with Estilo 4 sidebar, word-wrap, color degradation, main.go wiring; go test ./... green
+- [x] **Phase 2: Render and Output** - internal/render with Estilo 4 sidebar, word-wrap, color degradation, main.go wiring; go test ./... green (completed 2026-07-06)
 - [ ] **Phase 3: Build and Distribution** - cross-compile Makefile, dist/ artifacts, PT-BR README
 
 ## Phase Details
@@ -53,11 +53,11 @@ Plans:
   4. A quote with a missing optional field (empty `character` or `episodeTitle`) renders without layout breakage
   5. `go test ./...` passes green, covering both `internal/quotes` and `internal/render`
 
-**Plans**: 1 plan
+**Plans**: 1/1 plans complete
 
 Plans:
 
-- [ ] 02-01-PLAN.md — Estilo 4 render package, color degradation, main.go wiring, full test gate
+- [x] 02-01-PLAN.md — Estilo 4 render package, color degradation, main.go wiring, full test gate
 
 **UI hint**: yes
 
@@ -83,5 +83,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Data Foundation | 1/1 | Complete    | 2026-07-05 |
-| 2. Render and Output | 0/? | Not started | - |
+| 2. Render and Output | 1/1 | Complete   | 2026-07-06 |
 | 3. Build and Distribution | 0/? | Not started | - |
