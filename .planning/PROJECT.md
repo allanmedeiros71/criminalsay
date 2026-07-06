@@ -12,16 +12,15 @@ Rodar `criminalsay` e receber imediatamente uma citação memorável do BAU com 
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Base de citações em JSON embutida com ≥15 citações reais (Phase 1)
+- [x] Comando `criminalsay` exibe citação aleatória formatada e encerra com exit code 0 (Phase 2)
+- [x] Estilo visual Estilo 4: barra lateral `▌`, texto entre aspas, atribuição recuada (Phase 2)
+- [x] Quebra de linha com barra lateral alinhada em cada linha (Phase 2)
+- [x] Degradação graciosa sem cor — NO_COLOR / pipe / não-TTY (Phase 2)
+- [x] `go test ./...` passa em quotes/ e render/ (Phases 1–2)
 
 ### Active
 
-- [ ] Comando `criminalsay` exibe uma citação aleatória formatada e encerra com exit code 0
-- [ ] Base de citações em JSON embutida com ≥15 citações reais da série (go:embed)
-- [ ] Estilo visual "Terminal cru" (Estilo 4): barra lateral `▌` vermelha, texto entre aspas, atribuição recuada
-- [ ] Quebra de linha correta no texto da citação com barra lateral alinhada em cada linha
-- [ ] Degradação graciosa sem cor (NO_COLOR / pipe / não-TTY)
-- [ ] go test ./... passa; cobertura razoável em quotes/ e render/
 - [ ] Build cross-platform: Linux amd64, macOS amd64+arm64, Windows amd64
 - [ ] README em PT-BR com instalação, uso e instruções de build
 

@@ -11,22 +11,22 @@
 ### Core Behavior (CORE)
 
 - [x] **CORE-01**: Running `criminalsay` with no arguments selects one quote uniformly at random from the embedded dataset
-- [ ] **CORE-02**: Program prints the formatted quote to stdout and exits with code 0
+- [x] **CORE-02**: Program prints the formatted quote to stdout and exits with code 0
 - [x] **CORE-03**: Cold start completes in under 50ms under typical conditions (suitable for .bashrc/.zshrc)
 
 ### Rendering (REND)
 
-- [ ] **REND-01**: Output uses Estilo 4 "Terminal cru": a red `▌` (U+258C) sidebar prefix on every line of the quote text, with two columns of left indentation
-- [ ] **REND-02**: Quote text is wrapped at a fixed block width (≤52 useful columns), with the `▌` sidebar repeated and aligned on each wrapped line
-- [ ] **REND-03**: Quote text is displayed between double quotation marks in a highlighted color (white/bright)
-- [ ] **REND-04**: A blank line separates the quote block from the attribution line
-- [ ] **REND-05**: Attribution line is indented and formatted as `<author> · Criminal Minds · S<season>E<episode>`, with author in yellow and the rest in dim/muted tone, separated by `·` (U+00B7)
-- [ ] **REND-06**: No box border, no header, no footer — lightweight presentation only
+- [x] **REND-01**: Output uses Estilo 4 "Terminal cru": a red `▌` (U+258C) sidebar prefix on every line of the quote text, with two columns of left indentation
+- [x] **REND-02**: Quote text is wrapped at a fixed block width (≤52 useful columns), with the `▌` sidebar repeated and aligned on each wrapped line
+- [x] **REND-03**: Quote text is displayed between double quotation marks in a highlighted color (white/bright)
+- [x] **REND-04**: A blank line separates the quote block from the attribution line
+- [x] **REND-05**: Attribution line is indented and formatted as `<author> · Criminal Minds · S<season>E<episode>`, with author in yellow and the rest in dim/muted tone, separated by `·` (U+00B7)
+- [x] **REND-06**: No box border, no header, no footer — lightweight presentation only
 
 ### Color & Compatibility (COLOR)
 
-- [ ] **COLOR-01**: When stdout is a TTY with color support, output uses ANSI color sequences (truecolor/256/ANSI-16 auto-detected by lipgloss)
-- [ ] **COLOR-02**: When `NO_COLOR` is set, stdout is not a TTY, or output is piped, ANSI sequences are stripped; text remains readable with sidebar `▌`, quotes, and separators preserved
+- [x] **COLOR-01**: When stdout is a TTY with color support, output uses ANSI color sequences (truecolor/256/ANSI-16 auto-detected by lipgloss)
+- [x] **COLOR-02**: When `NO_COLOR` is set, stdout is not a TTY, or output is piped, ANSI sequences are stripped; text remains readable with sidebar `▌`, quotes, and separators preserved
 
 ### Build & Distribution (BUILD)
 
@@ -69,16 +69,16 @@
 | DAT-02 | Phase 1 | Complete | Quote struct definition frozen before render work begins |
 | DAT-03 | Phase 1 | Complete | Graceful omission implemented in render layer (Phase 2) but struct handles it here |
 | CORE-01 | Phase 1 | Complete | quotes.Random([]Quote) using math/rand/v2 |
-| CORE-02 | Phase 2 | Pending | main.go wiring; fmt.Println(render.Quote(...)) |
+| CORE-02 | Phase 2 | Complete | main.go wiring; fmt.Println(render.Quote(...)) |
 | CORE-03 | Phase 1 | Complete | NFR satisfied by embedded data + single JSON unmarshal — no network I/O |
-| REND-01 | Phase 2 | Pending | lipgloss Border{Left:"▌"} with red BorderForeground |
-| REND-02 | Phase 2 | Pending | Wrap at (fixedWidth - sidebarWidth); sidebar repeated per line |
-| REND-03 | Phase 2 | Pending | lipgloss style with white/bright foreground |
-| REND-04 | Phase 2 | Pending | Blank line between quote block and attribution |
-| REND-05 | Phase 2 | Pending | Attribution: yellow author + dim rest + · separator |
-| REND-06 | Phase 2 | Pending | No box border — Estilo 4 is sidebar-only |
-| COLOR-01 | Phase 2 | Pending | lipgloss auto-detects color depth from stdout |
-| COLOR-02 | Phase 2 | Pending | lipgloss strips ANSI for non-TTY/NO_COLOR automatically |
+| REND-01 | Phase 2 | Complete | lipgloss Border{Left:"▌"} with red BorderForeground |
+| REND-02 | Phase 2 | Complete | Wrap at (fixedWidth - sidebarWidth); sidebar repeated per line |
+| REND-03 | Phase 2 | Complete | lipgloss style with white/bright foreground |
+| REND-04 | Phase 2 | Complete | Blank line between quote block and attribution |
+| REND-05 | Phase 2 | Complete | Attribution: yellow author + dim rest + · separator |
+| REND-06 | Phase 2 | Complete | No box border — Estilo 4 is sidebar-only |
+| COLOR-01 | Phase 2 | Complete | lipgloss auto-detects color depth from stdout |
+| COLOR-02 | Phase 2 | Complete | lipgloss strips ANSI for non-TTY/NO_COLOR automatically |
 | BUILD-01 | Phase 1 | Complete | First verified in Phase 1; binary produced at project root |
 | BUILD-02 | Phase 3 | Pending | Makefile with CGO_ENABLED=0 for all targets |
 | BUILD-03 | Phase 1 | Complete | Data layer tests in Phase 1; render tests added in Phase 2 — requirement satisfied when both pass |
