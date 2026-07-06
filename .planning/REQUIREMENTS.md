@@ -31,12 +31,12 @@
 ### Build & Distribution (BUILD)
 
 - [x] **BUILD-01**: `go build -o criminalsay .` produces a working binary from the repository root
-- [ ] **BUILD-02**: Cross-compile script (`Makefile` or `scripts/build.sh`) produces binaries for: Linux amd64, macOS amd64, macOS arm64, Windows amd64; all with CGO_ENABLED=0
+- [x] **BUILD-02**: Cross-compile script (`Makefile` or `scripts/build.sh`) produces binaries for: Linux amd64, macOS amd64, macOS arm64, Windows amd64; all with CGO_ENABLED=0
 - [x] **BUILD-03**: `go test ./...` passes with reasonable coverage of `internal/quotes` and `internal/render`
 
 ### Documentation (DOC)
 
-- [ ] **DOC-01**: README in PT-BR with installation instructions, usage, and build instructions
+- [x] **DOC-01**: README in PT-BR with installation instructions, usage, and build instructions
 
 ---
 
@@ -80,6 +80,6 @@
 | COLOR-01 | Phase 2 | Complete | lipgloss auto-detects color depth from stdout |
 | COLOR-02 | Phase 2 | Complete | lipgloss strips ANSI for non-TTY/NO_COLOR automatically |
 | BUILD-01 | Phase 1 | Complete | First verified in Phase 1; binary produced at project root |
-| BUILD-02 | Phase 3 | Pending | Makefile with CGO_ENABLED=0 for all targets |
+| BUILD-02 | Phase 3 | Complete | Makefile with CGO_ENABLED=0 for all targets |
 | BUILD-03 | Phase 1 | Complete | Data layer tests in Phase 1; render tests added in Phase 2 — requirement satisfied when both pass |
-| DOC-01 | Phase 3 | Pending | README in PT-BR |
+| DOC-01 | Phase 3 | Complete | README in PT-BR |

@@ -18,11 +18,12 @@ Rodar `criminalsay` e receber imediatamente uma citação memorável do BAU com 
 - [x] Quebra de linha com barra lateral alinhada em cada linha (Phase 2)
 - [x] Degradação graciosa sem cor — NO_COLOR / pipe / não-TTY (Phase 2)
 - [x] `go test ./...` passa em quotes/ e render/ (Phases 1–2)
+- [x] Build cross-platform: Linux amd64, macOS amd64+arm64, Windows amd64 — Makefile com CGO_ENABLED=0 (Phase 3)
+- [x] README em PT-BR com instalação, uso e instruções de build (Phase 3)
 
 ### Active
 
-- [ ] Build cross-platform: Linux amd64, macOS amd64+arm64, Windows amd64
-- [ ] README em PT-BR com instalação, uso e instruções de build
+_(nenhum — milestone v1.0 completo)_
 
 ### Out of Scope
 
@@ -80,4 +81,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-07-05 after initialization*
+*Last updated: 2026-07-06 after Phase 3 (milestone v1.0 complete)*
