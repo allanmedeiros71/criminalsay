@@ -94,7 +94,7 @@ func buildQuoteBlock(q quotes.Quote, colorEnabled bool) string {
 		renderedAttr = append(renderedAttr, attrIndent+renderAttributionLine(al, colorEnabled))
 	}
 
-	return strings.Join(quoteLines, "\n") + "\n\n" + strings.Join(renderedAttr, "\n")
+	return "\n" + strings.Join(quoteLines, "\n") + "\n\n" + strings.Join(renderedAttr, "\n")
 }
 
 // Quote formats q as Estilo 4 terminal output and returns the string.
