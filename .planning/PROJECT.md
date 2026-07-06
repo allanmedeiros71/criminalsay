@@ -33,14 +33,29 @@ _(nenhum — milestone v1.0 completo)_
 - Busca/scraping de citações em runtime — descartado (dados offline-first por decisão D5)
 - Distribuição via Homebrew/AUR/pacotes — v2
 
+## Current State
+
+**Shipped:** v1.0 MVP (2026-07-06)
+
+CriminalSay v1.0 is feature-complete for the initial scope: run `criminalsay` for a styled random BAU quote, cross-compile with `make all`, and follow `README.pt.md` for install/usage/build. All 17 v1 requirements validated. PR #3 merges Phase 3 (build + docs) to main.
+
+## Next Milestone Goals
+
+_(not yet defined — run `/gsd-new-milestone`)_
+
+Candidate v2 scope from deferred requirements:
+- CLI flags (`--character`, `--season`, `--style`)
+- GitHub Releases / package distribution (Homebrew, etc.)
+- Additional visual themes
+
 ## Context
 
 - Projeto greenfield em Go, autor: Allan (github.com/allanmedeiros71)
 - Repositório: github.com/allanmedeiros71/criminalsay
 - Licença: MIT
 - Código e comentários em inglês; documentação de usuário em português
-- Estilo visual já escolhido e travado: Estilo 4 "Terminal cru" (seção 6.1 do CONTEXT.md)
-- Estrutura de pacotes já definida: main.go + internal/quotes/ + internal/render/ + data/quotes.json
+- Estilo visual travado: Estilo 4 "Terminal cru"
+- Estrutura: main.go + internal/quotes/ + internal/render/ + data/quotes.json + Makefile
 
 ## Constraints
 
@@ -55,13 +70,14 @@ _(nenhum — milestone v1.0 completo)_
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Linguagem: Go | Binário único, cross-compile trivial, distribuição simples | — Pending |
-| Estilização: lipgloss | Bordas, layout, cores adaptativas a truecolor/256/ANSI-16 | — Pending |
-| Cor complementar: fatih/color | Leve, para casos simples fora do layout lipgloss | — Pending |
-| Fonte de dados: JSON local | Sem API externa, offline-first | — Pending |
-| Embed: go:embed | Binário autocontido, sem arquivos externos | — Pending |
-| Estilo visual: Estilo 4 "Terminal cru" | Leve, sem caixa fechada; ideal para .bashrc | — Pending |
-| Aleatoriedade: math/rand/v2 | Sorteio simples, sem necessidade de crypto | — Pending |
+| Linguagem: Go | Binário único, cross-compile trivial, distribuição simples | ✓ Good — v1.0 shipped |
+| Estilização: lipgloss v1.1.0 | Bordas, layout, cores adaptativas a truecolor/256/ANSI-16 | ✓ Good — pinned, not v2 |
+| Fonte de dados: JSON local | Sem API externa, offline-first | ✓ Good — 20 quotes embedded |
+| Embed: go:embed | Binário autocontido, sem arquivos externos | ✓ Good — data/ at repo root |
+| Estilo visual: Estilo 4 "Terminal cru" | Leve, sem caixa fechada; ideal para .bashrc | ✓ Good — UAT approved |
+| Aleatoriedade: math/rand/v2 | Sorteio simples, sem necessidade de crypto | ✓ Good — Go 1.22+ floor |
+| Build: Makefile only (no build.sh) | Single build interface, CGO_ENABLED=0 | ✓ Good — four-platform dist/ |
+| Docs: README.md (EN) + README.pt.md (PT) | OSS default EN; DOC-01 minimal PT-BR | ✓ Good — UAT walkthrough passed |
 
 ## Evolution
 
@@ -81,4 +97,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-07-06 after Phase 3 (milestone v1.0 complete)*
+*Last updated: 2026-07-06 after v1.0 milestone*
