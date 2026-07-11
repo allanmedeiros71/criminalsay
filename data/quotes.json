@@ -158,5 +158,773 @@
     "season": 11,
     "episode": 22,
     "episodeTitle": "The Storm"
+  },
+  {
+    "quote": "In order to be created, a work of art must first make use of the dark forces of the soul.",
+    "author": "Albert Camus",
+    "character": "Jason Gideon",
+    "season": 1,
+    "episode": 3,
+    "episodeTitle": "Won't Get Fooled Again"
+  },
+  {
+    "quote": "We all have a monster within; the difference is in degree, not in kind.",
+    "author": "Douglas Preston",
+    "character": "Jason Gideon",
+    "season": 1,
+    "episode": 5,
+    "episodeTitle": "Broken Mirror"
+  },
+  {
+    "quote": "Knowing your own darkness is the best method for dealing with the darknesses of other people.",
+    "author": "Carl Jung",
+    "character": "Jason Gideon",
+    "season": 1,
+    "episode": 8,
+    "episodeTitle": "Natural Born Killer"
+  },
+  {
+    "quote": "The most dangerous animal on earth is a silent, smiling woman.",
+    "author": "Mehmet Murat Ildan",
+    "character": "Emily Prentiss",
+    "season": 1,
+    "episode": 18,
+    "episodeTitle": "Somebody's Watching"
+  },
+  {
+    "quote": "Out of suffering have emerged the strongest souls; the most massive characters are seared with scars.",
+    "author": "Kahlil Gibran",
+    "character": "Aaron Hotchner",
+    "season": 2,
+    "episode": 15,
+    "episodeTitle": "Revelations"
+  },
+  {
+    "quote": "We are all broken, that's how the light gets in.",
+    "author": "Ernest Hemingway",
+    "character": "Spencer Reid",
+    "season": 2,
+    "episode": 22,
+    "episodeTitle": "Legacy"
+  },
+  {
+    "quote": "When you look into an abyss, the abyss also looks into you.",
+    "author": "Friedrich Nietzsche",
+    "character": "Derek Morgan",
+    "season": 2,
+    "episode": 14,
+    "episodeTitle": "The Big Game"
+  },
+  {
+    "quote": "The only true wisdom is in knowing you know nothing.",
+    "author": "Socrates",
+    "character": "Spencer Reid",
+    "season": 3,
+    "episode": 5,
+    "episodeTitle": "Seven Seconds"
+  },
+  {
+    "quote": "It is not length of life, but depth of life.",
+    "author": "Ralph Waldo Emerson",
+    "character": "Aaron Hotchner",
+    "season": 3,
+    "episode": 18,
+    "episodeTitle": "The Crossing"
+  },
+  {
+    "quote": "A good man can be stupid and still be good. But a bad man must have brains.",
+    "author": "Maxim Gorky",
+    "character": "David Rossi",
+    "season": 3,
+    "episode": 16,
+    "episodeTitle": "Elephant's Memory"
+  },
+  {
+    "quote": "Deep into that darkness peering, long I stood there, wondering, fearing, doubting.",
+    "author": "Edgar Allan Poe",
+    "character": "Spencer Reid",
+    "season": 4,
+    "episode": 4,
+    "episodeTitle": "Paradise"
+  },
+  {
+    "quote": "There is no refuge from memory and remorse in this world. The spirits of our foolish deeds haunt us, with or without repentance.",
+    "author": "Gilbert Parker",
+    "character": "David Rossi",
+    "season": 4,
+    "episode": 9,
+    "episodeTitle": "52 Pickup"
+  },
+  {
+    "quote": "Whoever does not have two-thirds of his time to himself is a slave.",
+    "author": "Friedrich Nietzsche",
+    "character": "Spencer Reid",
+    "season": 4,
+    "episode": 16,
+    "episodeTitle": "Pleasure Is My Business"
+  },
+  {
+    "quote": "Every story I write adds to me a little, changes me a little, forces me to reexamine an attitude or feeling that I've simply accepted without thinking.",
+    "author": "Octavia Butler",
+    "character": "Jennifer Jareau",
+    "season": 4,
+    "episode": 22,
+    "episodeTitle": "The Big Wheel"
+  },
+  {
+    "quote": "Don't forget — no one else sees the world the way you do, so no one else can tell the stories that you have to tell.",
+    "author": "Charles de Lint",
+    "character": "Penelope Garcia",
+    "season": 5,
+    "episode": 1,
+    "episodeTitle": "Nameless, Faceless"
+  },
+  {
+    "quote": "In the depth of winter I finally learned that within me there lay an invincible summer.",
+    "author": "Albert Camus",
+    "character": "Emily Prentiss",
+    "season": 5,
+    "episode": 18,
+    "episodeTitle": "The Fight"
+  },
+  {
+    "quote": "There is no love without forgiveness, and there is no forgiveness without love.",
+    "author": "Bryant H. McGill",
+    "character": "Jennifer Jareau",
+    "season": 5,
+    "episode": 22,
+    "episodeTitle": "The Internet Is Forever"
+  },
+  {
+    "quote": "Between stimulus and response there is a space. In that space is our power to choose our response.",
+    "author": "Viktor Frankl",
+    "character": "Aaron Hotchner",
+    "season": 6,
+    "episode": 9,
+    "episodeTitle": "Into the Woods"
+  },
+  {
+    "quote": "Don't wait. The time will never be just right.",
+    "author": "Napoleon Hill",
+    "character": "Derek Morgan",
+    "season": 6,
+    "episode": 12,
+    "episodeTitle": "Corazon"
+  },
+  {
+    "quote": "It takes twenty years to build a reputation and five minutes to ruin it.",
+    "author": "Warren Buffett",
+    "character": "David Rossi",
+    "season": 6,
+    "episode": 15,
+    "episodeTitle": "Today I Do"
+  },
+  {
+    "quote": "The human mind is our fundamental resource.",
+    "author": "John F. Kennedy",
+    "character": "Spencer Reid",
+    "season": 7,
+    "episode": 7,
+    "episodeTitle": "There's No Place Like Home"
+  },
+  {
+    "quote": "Who looks outside, dreams; who looks inside, awakes.",
+    "author": "Carl Jung",
+    "character": "Emily Prentiss",
+    "season": 7,
+    "episode": 11,
+    "episodeTitle": "True Genius"
+  },
+  {
+    "quote": "Hope is the thing with feathers that perches in the soul, and sings the tune without the words, and never stops at all.",
+    "author": "Emily Dickinson",
+    "character": "Jennifer Jareau",
+    "season": 7,
+    "episode": 18,
+    "episodeTitle": "Foundation"
+  },
+  {
+    "quote": "We are all the sum of our scars.",
+    "author": "David Rossi",
+    "character": "David Rossi",
+    "season": 7,
+    "episode": 22,
+    "episodeTitle": "Profiling 101"
+  },
+  {
+    "quote": "The most courageous act is still to think for yourself. Aloud.",
+    "author": "Coco Chanel",
+    "character": "Emily Prentiss",
+    "season": 8,
+    "episode": 5,
+    "episodeTitle": "The Good Earth"
+  },
+  {
+    "quote": "Not all those who wander are lost.",
+    "author": "J.R.R. Tolkien",
+    "character": "Spencer Reid",
+    "season": 8,
+    "episode": 9,
+    "episodeTitle": "Magnificent Light"
+  },
+  {
+    "quote": "The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.",
+    "author": "William Arthur Ward",
+    "character": "Aaron Hotchner",
+    "season": 8,
+    "episode": 14,
+    "episodeTitle": "Broken"
+  },
+  {
+    "quote": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+    "author": "Siddhartha Gautama",
+    "character": "Derek Morgan",
+    "season": 8,
+    "episode": 18,
+    "episodeTitle": "Restoration"
+  },
+  {
+    "quote": "We are all, each one of us, trying to find our way in this world.",
+    "author": "David Rossi",
+    "character": "David Rossi",
+    "season": 8,
+    "episode": 24,
+    "episodeTitle": "The Replicator"
+  },
+  {
+    "quote": "Sometimes we have to lose ourselves to find ourselves.",
+    "author": "Spencer Reid",
+    "character": "Spencer Reid",
+    "season": 9,
+    "episode": 6,
+    "episodeTitle": "In the Blood"
+  },
+  {
+    "quote": "Life appears to me too short to be spent in nursing animosity or registering wrongs.",
+    "author": "Charlotte Bronte",
+    "character": "Jennifer Jareau",
+    "season": 9,
+    "episode": 14,
+    "episodeTitle": "200"
+  },
+  {
+    "quote": "A man who dares to waste one hour of time has not discovered the value of life.",
+    "author": "Charles Darwin",
+    "character": "Spencer Reid",
+    "season": 9,
+    "episode": 18,
+    "episodeTitle": "Scream"
+  },
+  {
+    "quote": "You can clutch the past so tightly to your chest that it leaves your arms too full to embrace the present.",
+    "author": "Jan Glidewell",
+    "character": "Aaron Hotchner",
+    "season": 9,
+    "episode": 21,
+    "episodeTitle": "What Happens in Mecklinburg..."
+  },
+  {
+    "quote": "If you're going through hell, keep going.",
+    "author": "Winston Churchill",
+    "character": "Derek Morgan",
+    "season": 10,
+    "episode": 1,
+    "episodeTitle": "X"
+  },
+  {
+    "quote": "In the long run, we shape our lives, and we shape ourselves. The process never ends until we die. And the choices we make are ultimately our own responsibility.",
+    "author": "Eleanor Roosevelt",
+    "character": "Jennifer Jareau",
+    "season": 10,
+    "episode": 3,
+    "episodeTitle": "A Thousand Suns"
+  },
+  {
+    "quote": "Cowards die many times before their deaths; the valiant never taste of death but once.",
+    "author": "William Shakespeare",
+    "character": "Aaron Hotchner",
+    "season": 10,
+    "episode": 5,
+    "episodeTitle": "Boxed In"
+  },
+  {
+    "quote": "Although the world is full of suffering, it is also full of the overcoming of it.",
+    "author": "Helen Keller",
+    "character": "Emily Prentiss",
+    "season": 10,
+    "episode": 8,
+    "episodeTitle": "The Boys of Sudworth Place"
+  },
+  {
+    "quote": "If we are to know good, we must also know evil; light requires darkness.",
+    "author": "Spencer Reid",
+    "character": "Spencer Reid",
+    "season": 10,
+    "episode": 12,
+    "episodeTitle": "Anonymous"
+  },
+  {
+    "quote": "Nothing in life is to be feared, it is only to be understood.",
+    "author": "Marie Curie",
+    "character": "Spencer Reid",
+    "season": 10,
+    "episode": 15,
+    "episodeTitle": "Scream"
+  },
+  {
+    "quote": "The beginning is always today.",
+    "author": "Mary Wollstonecraft Shelley",
+    "character": "Penelope Garcia",
+    "season": 10,
+    "episode": 18,
+    "episodeTitle": "Rock Creek Park"
+  },
+  {
+    "quote": "Sometimes good things fall apart so better things can fall together.",
+    "author": "Marilyn Monroe",
+    "character": "Jennifer Jareau",
+    "season": 10,
+    "episode": 22,
+    "episodeTitle": "Protection"
+  },
+  {
+    "quote": "We must be willing to let go of the life we have planned, so as to have the life that is waiting for us.",
+    "author": "Joseph Campbell",
+    "character": "David Rossi",
+    "season": 11,
+    "episode": 1,
+    "episodeTitle": "The Job"
+  },
+  {
+    "quote": "Out of your vulnerabilities will come your strength.",
+    "author": "Sigmund Freud",
+    "character": "Aaron Hotchner",
+    "season": 11,
+    "episode": 4,
+    "episodeTitle": "Killer App"
+  },
+  {
+    "quote": "It is not in the stars to hold our destiny but in ourselves.",
+    "author": "William Shakespeare",
+    "character": "Spencer Reid",
+    "season": 11,
+    "episode": 7,
+    "episodeTitle": "Entropy"
+  },
+  {
+    "quote": "What lies behind us and what lies before us are small matters compared to what lies within us.",
+    "author": "Ralph Waldo Emerson",
+    "character": "Derek Morgan",
+    "season": 11,
+    "episode": 12,
+    "episodeTitle": "Drive"
+  },
+  {
+    "quote": "Courage is not simply one of the virtues, but the form of every virtue at the testing point.",
+    "author": "C.S. Lewis",
+    "character": "Jennifer Jareau",
+    "season": 11,
+    "episode": 15,
+    "episodeTitle": "A Beautiful Disaster"
+  },
+  {
+    "quote": "In our lives, change is unavoidable, loss is unavoidable. In the adaptability and ease with which we experience change, lies our happiness and freedom.",
+    "author": "Siddhartha Gautama",
+    "character": "Emily Prentiss",
+    "season": 11,
+    "episode": 18,
+    "episodeTitle": "A Man Called Roger"
+  },
+  {
+    "quote": "Sometimes you have to be apart from people you love, but that doesn't make you love them any less. Sometimes it makes you love them more.",
+    "author": "Nicholas Sparks",
+    "character": "Penelope Garcia",
+    "season": 11,
+    "episode": 21,
+    "episodeTitle": "Devil's Backbone"
+  },
+  {
+    "quote": "I ask not for a lighter burden, but for broader shoulders.",
+    "author": "Jewish Proverb",
+    "character": "Aaron Hotchner",
+    "season": 12,
+    "episode": 1,
+    "episodeTitle": "The Crimson King"
+  },
+  {
+    "quote": "The devil doesn't come dressed in a red cape and pointy horns. He comes as everything you've ever wished for.",
+    "author": "Tucker Max",
+    "character": "Spencer Reid",
+    "season": 12,
+    "episode": 4,
+    "episodeTitle": "Seek and Destroy"
+  },
+  {
+    "quote": "The art of life is a constant readjustment to our surroundings.",
+    "author": "Kakuzo Okakura",
+    "character": "David Rossi",
+    "season": 12,
+    "episode": 8,
+    "episodeTitle": "Scarecrow"
+  },
+  {
+    "quote": "We do not need magic to transform our world. We carry all of the power we need inside ourselves already.",
+    "author": "J.K. Rowling",
+    "character": "Jennifer Jareau",
+    "season": 12,
+    "episode": 13,
+    "episodeTitle": "Spencer"
+  },
+  {
+    "quote": "From what we get, we can make a living; what we give, however, makes a life.",
+    "author": "Arthur Ashe",
+    "character": "Emily Prentiss",
+    "season": 12,
+    "episode": 17,
+    "episodeTitle": "In the Dark"
+  },
+  {
+    "quote": "The most common form of despair is not being who you are.",
+    "author": "Soren Kierkegaard",
+    "character": "Spencer Reid",
+    "season": 13,
+    "episode": 1,
+    "episodeTitle": "Wheels Up"
+  },
+  {
+    "quote": "We must embrace pain and burn it as fuel for our journey.",
+    "author": "Kenji Miyazawa",
+    "character": "Emily Prentiss",
+    "season": 13,
+    "episode": 3,
+    "episodeTitle": "Blue Angel"
+  },
+  {
+    "quote": "Real generosity toward the future lies in giving all to the present.",
+    "author": "Albert Camus",
+    "character": "Jennifer Jareau",
+    "season": 13,
+    "episode": 6,
+    "episodeTitle": "The Bunker"
+  },
+  {
+    "quote": "The most authentic thing about us is our capacity to create, to overcome, to endure, to transform, to love and to be greater than our suffering.",
+    "author": "Ben Okri",
+    "character": "Luke Alvez",
+    "season": 13,
+    "episode": 9,
+    "episodeTitle": "False Flag"
+  },
+  {
+    "quote": "The most wasted of days is one without laughter.",
+    "author": "e.e. cummings",
+    "character": "Penelope Garcia",
+    "season": 13,
+    "episode": 11,
+    "episodeTitle": "Full Tilt Boogie"
+  },
+  {
+    "quote": "Sometimes it takes a wrong turn to get you to the right place.",
+    "author": "Mandy Hale",
+    "character": "Tara Lewis",
+    "season": 13,
+    "episode": 14,
+    "episodeTitle": "Miasma"
+  },
+  {
+    "quote": "It is not in the nature of man — nor of any living entity — to start out by giving up.",
+    "author": "Ayn Rand",
+    "character": "David Rossi",
+    "season": 13,
+    "episode": 17,
+    "episodeTitle": "The Capilanos"
+  },
+  {
+    "quote": "We are all so much together, but we are all dying of loneliness.",
+    "author": "Albert Schweitzer",
+    "character": "Spencer Reid",
+    "season": 13,
+    "episode": 20,
+    "episodeTitle": "Skin and Bone"
+  },
+  {
+    "quote": "It is a mark of an educated mind to be able to entertain a thought without accepting it.",
+    "author": "Aristotle",
+    "character": "Spencer Reid",
+    "season": 13,
+    "episode": 22,
+    "episodeTitle": "Believer"
+  },
+  {
+    "quote": "The only way to make sense out of change is to plunge into it, move with it, and join the dance.",
+    "author": "Alan Watts",
+    "character": "Emily Prentiss",
+    "season": 14,
+    "episode": 1,
+    "episodeTitle": "300"
+  },
+  {
+    "quote": "Resilience is knowing that you are the only one that has the power and the responsibility to pick yourself up.",
+    "author": "Mary Holloway",
+    "character": "Jennifer Jareau",
+    "season": 14,
+    "episode": 4,
+    "episodeTitle": "Innocence"
+  },
+  {
+    "quote": "We are not human beings having a spiritual experience. We are spiritual beings having a human experience.",
+    "author": "Pierre Teilhard de Chardin",
+    "character": "Tara Lewis",
+    "season": 14,
+    "episode": 7,
+    "episodeTitle": "Twenty Seven"
+  },
+  {
+    "quote": "The secret of getting ahead is getting started.",
+    "author": "Mark Twain",
+    "character": "Penelope Garcia",
+    "season": 14,
+    "episode": 9,
+    "episodeTitle": "Broken Wing"
+  },
+  {
+    "quote": "Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow.",
+    "author": "Lao Tzu",
+    "character": "David Rossi",
+    "season": 14,
+    "episode": 12,
+    "episodeTitle": "Hamelin"
+  },
+  {
+    "quote": "No man can think clearly when his fists are clenched.",
+    "author": "George Jean Nathan",
+    "character": "Luke Alvez",
+    "season": 14,
+    "episode": 14,
+    "episodeTitle": "Sick and Evil"
+  },
+  {
+    "quote": "We cannot hold a torch to light another's path without brightening our own.",
+    "author": "Ben Sweetland",
+    "character": "Spencer Reid",
+    "season": 14,
+    "episode": 17,
+    "episodeTitle": "Shiver"
+  },
+  {
+    "quote": "The world breaks everyone and afterward many are strong at the broken places.",
+    "author": "Ernest Hemingway",
+    "character": "Aaron Hotchner",
+    "season": 14,
+    "episode": 19,
+    "episodeTitle": "Bloodline"
+  },
+  {
+    "quote": "A single act of kindness throws out roots in all directions, and the roots spring up and make new trees.",
+    "author": "Amelia Earhart",
+    "character": "Jennifer Jareau",
+    "season": 15,
+    "episode": 1,
+    "episodeTitle": "Under the Skin"
+  },
+  {
+    "quote": "In order to be irreplaceable, one must always be different.",
+    "author": "Coco Chanel",
+    "character": "Emily Prentiss",
+    "season": 15,
+    "episode": 2,
+    "episodeTitle": "Awakenings"
+  },
+  {
+    "quote": "You cannot find peace by avoiding life.",
+    "author": "Virginia Woolf",
+    "character": "Spencer Reid",
+    "season": 15,
+    "episode": 3,
+    "episodeTitle": "Spectator Slowing"
+  },
+  {
+    "quote": "There is a crack in everything, that's how the light gets in.",
+    "author": "Leonard Cohen",
+    "character": "David Rossi",
+    "season": 15,
+    "episode": 5,
+    "episodeTitle": "Ghost"
+  },
+  {
+    "quote": "It takes ten times as long to put yourself back together as it does to fall apart.",
+    "author": "Suzanne Collins",
+    "character": "Jennifer Jareau",
+    "season": 15,
+    "episode": 7,
+    "episodeTitle": "Saturday"
+  },
+  {
+    "quote": "For beautiful eyes, look for the good in others; for beautiful lips, speak only words of kindness; and for poise, walk with the knowledge that you are never alone.",
+    "author": "Audrey Hepburn",
+    "character": "Penelope Garcia",
+    "season": 15,
+    "episode": 8,
+    "episodeTitle": "Family Tree"
+  },
+  {
+    "quote": "No matter how dark the night, morning always comes, and our journey begins anew.",
+    "author": "Lulu",
+    "character": "Luke Alvez",
+    "season": 15,
+    "episode": 9,
+    "episodeTitle": "Face Off"
+  },
+  {
+    "quote": "The way out of the labyrinth is to have no desire for anything but truth.",
+    "author": "Fyodor Dostoevsky",
+    "character": "Spencer Reid",
+    "season": 15,
+    "episode": 10,
+    "episodeTitle": "And in the End..."
+  },
+  {
+    "quote": "The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed.",
+    "author": "Carl Jung",
+    "character": "David Rossi",
+    "season": 1,
+    "episode": 10,
+    "episodeTitle": "The Popular Kids"
+  },
+  {
+    "quote": "A witty saying proves nothing.",
+    "author": "Voltaire",
+    "character": "Spencer Reid",
+    "season": 1,
+    "episode": 14,
+    "episodeTitle": "Riding the Lightning"
+  },
+  {
+    "quote": "We are such stuff as dreams are made on, and our little life is rounded with a sleep.",
+    "author": "William Shakespeare",
+    "character": "Jason Gideon",
+    "season": 1,
+    "episode": 20,
+    "episodeTitle": "Charm and Harm"
+  },
+  {
+    "quote": "If you prick us, do we not bleed? If you tickle us, do we not laugh? If you poison us, do we not die? And if you wrong us, shall we not revenge?",
+    "author": "William Shakespeare",
+    "character": "Derek Morgan",
+    "season": 2,
+    "episode": 5,
+    "episodeTitle": "Aftermath"
+  },
+  {
+    "quote": "All that we see or seem is but a dream within a dream.",
+    "author": "Edgar Allan Poe",
+    "character": "Spencer Reid",
+    "season": 2,
+    "episode": 12,
+    "episodeTitle": "Profiler, Profiled"
+  },
+  {
+    "quote": "Extreme fear can neither fight nor fly.",
+    "author": "William Shakespeare",
+    "character": "Aaron Hotchner",
+    "season": 2,
+    "episode": 18,
+    "episodeTitle": "Jones"
+  },
+  {
+    "quote": "I have always thought the actions of men the best interpreters of their thoughts.",
+    "author": "John Locke",
+    "character": "David Rossi",
+    "season": 3,
+    "episode": 4,
+    "episodeTitle": "Children of the Dark"
+  },
+  {
+    "quote": "There is no expedient to which a man will not resort to avoid the real labor of thinking.",
+    "author": "Joshua Reynolds",
+    "character": "Aaron Hotchner",
+    "season": 4,
+    "episode": 7,
+    "episodeTitle": "Memoriam"
+  },
+  {
+    "quote": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    "author": "Ralph Waldo Emerson",
+    "character": "Spencer Reid",
+    "season": 5,
+    "episode": 15,
+    "episodeTitle": "Public Enemy"
+  },
+  {
+    "quote": "The measure of a man's real character is what he would do if he knew he would never be found out.",
+    "author": "Thomas Macaulay",
+    "character": "Aaron Hotchner",
+    "season": 6,
+    "episode": 5,
+    "episodeTitle": "Safe Haven"
+  },
+  {
+    "quote": "Truth is not only violated by falsehood; it may be equally outraged by silence.",
+    "author": "Henri Frederic Amiel",
+    "character": "Emily Prentiss",
+    "season": 7,
+    "episode": 14,
+    "episodeTitle": "Closing Time"
+  },
+  {
+    "quote": "The strength of a civilization is not measured by its ability to fight wars, but rather by its ability to prevent them.",
+    "author": "Gene Roddenberry",
+    "character": "David Rossi",
+    "season": 8,
+    "episode": 8,
+    "episodeTitle": "The Wheels on the Bus"
+  },
+  {
+    "quote": "He who is not courageous enough to take risks will accomplish nothing in life.",
+    "author": "Muhammad Ali",
+    "character": "Derek Morgan",
+    "season": 9,
+    "episode": 9,
+    "episodeTitle": "Strange Fruit"
+  },
+  {
+    "quote": "All things are possible until they are proved impossible and even the impossible may only be so, as of now.",
+    "author": "Pearl S. Buck",
+    "character": "Spencer Reid",
+    "season": 10,
+    "episode": 9,
+    "episodeTitle": "Fate"
+  },
+  {
+    "quote": "A good person can make another person good; it means that goodness will elicit goodness in the society.",
+    "author": "Pope John XXIII",
+    "character": "Jennifer Jareau",
+    "season": 11,
+    "episode": 9,
+    "episodeTitle": "Internal Affairs"
+  },
+  {
+    "quote": "You can't stop the future. You can't rewind the past. The only way to learn the secret of how to live is to plunge into the middle of living it.",
+    "author": "Ann Brashares",
+    "character": "Tara Lewis",
+    "season": 12,
+    "episode": 10,
+    "episodeTitle": "Seek and Destroy"
+  },
+  {
+    "quote": "Whoever has not known himself has known nothing, but whoever has known himself has simultaneously achieved knowledge about the depth of all things.",
+    "author": "Theodotus of Alexandria",
+    "character": "Spencer Reid",
+    "season": 13,
+    "episode": 5,
+    "episodeTitle": "Lucky Strikes"
+  },
+  {
+    "quote": "I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration.",
+    "author": "Frank Herbert",
+    "character": "Matt Simmons",
+    "season": 14,
+    "episode": 10,
+    "episodeTitle": "Flesh and Blood"
   }
 ]
