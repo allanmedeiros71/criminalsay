@@ -31,7 +31,7 @@ See: .planning/PROJECT.md (updated 2026-07-06)
 Phase: Milestone v1.0 complete
 Plan: —
 Status: Awaiting next milestone
-Last activity: 2026-07-06 — Milestone v1.0 completed and archived
+Last activity: 2026-07-11 - Completed quick task 260710-wv1: expand data/quotes.json to 116 entries across all 15 seasons of Criminal Minds
 
 ## Performance Metrics
 
@@ -73,6 +73,12 @@ None yet.
 ### Blockers/Concerns
 
 None — v1.0 UAT complete (including Windows cmd.exe fallback and cross-platform smoke).
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260710-wv1 | Preencha o arquivo data/quotes.json com as citações encontradas na internet de todas as temporadas de criminal minds. Siga o padrão do arquivo | 2026-07-11 | 89a692d | [260710-wv1-preencha-o-arquivo-data-quotes-json-com-](./quick/260710-wv1-preencha-o-arquivo-data-quotes-json-com-/) |
 
 ## Deferred Items
 
